@@ -8,7 +8,7 @@ print("Bot Status : Online")
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, "Hi there ! 👋\nSend me /ICT to continue\nSend /help To find out what I can do\n\nCreated by Malindu Prabodhitha | 2021 ©")
+	bot.reply_to(message, "Hi there ! 👋\nSend me /ICT to continue\nSend /help To find out what I can do\n\nCreated by Malindu Prabodhitha | 2021 ©")
 
 @bot.message_handler(commands=['Greet'])
 def greet(message):
@@ -57,7 +57,6 @@ def malindu(message):
 @bot.message_handler(commands=["stop"])
 def stop(message):
   bot.send_message(message.chat.id,"Attempting to power down")
-  bot.send_message(message.chat.id,"Power Down Sucessfully")
   bot.send_message(message.chat.id,"5")
   bot.send_message(message.chat.id,"4")
   bot.send_message(message.chat.id,"3")
@@ -66,9 +65,12 @@ def stop(message):
   bot.send_message(message.chat.id,"All systems back online")
   bot.send_message(message.chat.id,"Power Down Failed! Error : 503")
 
+@bot.message_handler(commands=["about"])
+def about(message):
+  bot.send_message(message.chat.id,"I am a Bot \nI was cretaed on 17th of July 2021 \nI can help you with some things to find out send /help")
 #use this code to spam (duplicate all the msgs)
 #@bot.message_handler(func=lambda message: True)
 #def echo_all(message):
-    #bot.reply_to(message, message.text)
+	#bot.reply_to(message, message.text)
  
 bot.polling()
