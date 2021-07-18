@@ -1,6 +1,6 @@
 import telebot
 
-API_KEY = '1941480414:AAHY5GQa-zJp5C71DOjwyupq1fYQdBuE7IM'
+API_KEY = ''
 bot = telebot.TeleBot(API_KEY)
 
 print("Bot Status : Booting")
